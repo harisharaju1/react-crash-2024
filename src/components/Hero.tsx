@@ -1,9 +1,4 @@
-type HeroProps = {
-  title?: string;
-  subtitle?: string;
-};
-
-const Hero: React.FC<HeroProps> = ({
+const Hero = ({
   title = "Become a React Dev",
   subtitle = "Find a React Job that fits your skillset",
 }) => {

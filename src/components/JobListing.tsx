@@ -1,19 +1,9 @@
 import { useState } from "react";
 import { FaMapMarker } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { Job } from "../types/Job";
 
-type JobProps = {
-  job: {
-    type: string;
-    title: string;
-    description: string;
-    salary: string;
-    location: string;
-    id: string;
-  };
-};
-
-const JobListing: React.FC<JobProps> = ({ job }) => {
+const JobListing = ({ job }: { job: Job }) => {
   const [showFullDescription, setShowFullDescription] = useState(false);
 
   let description = job.description;
