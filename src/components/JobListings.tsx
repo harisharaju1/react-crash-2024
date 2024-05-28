@@ -11,8 +11,8 @@ const JobListings = ({ isHome }: { isHome: boolean }) => {
     const fetchJobs = async () => {
       try {
         const res = isHome
-          ? await fetch("http://localhost:5000/jobs?_limit=3")
-          : await fetch("http://localhost:5000/jobs");
+          ? await fetch("/api/jobs?_limit=3")
+          : await fetch("/api/jobs");
         const data = await res.json();
         setJobs(data);
       } catch (error) {
